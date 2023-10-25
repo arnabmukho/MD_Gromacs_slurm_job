@@ -6,7 +6,7 @@ Before you create your SLURM batch script, make sure you have a GROMACS input fi
 
 2. Create a SLURM Batch Script:
 
-Create a SLURM batch script (e.g., gromacs_job.sh) using a text editor. This script will define the job parameters and how to execute GROMACS.
+Create a SLURM batch script (e.g., md.batch) using a text editor. This script will define the job parameters and how to execute GROMACS.
 Make sure to customize the job name, output file names, partition, number of MPI tasks, and other options according to your cluster's configuration and your specific needs.
 
 3. Submit the Job:
