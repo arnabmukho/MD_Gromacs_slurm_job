@@ -23,4 +23,4 @@ export UCX_NET_DEVICES=mlx5_0:1
 
 cd $SLURM_SUBMIT_DIR
 
-mpirun gmx_mpi grompp -f step4.0_minimization.mdp -c step3_input.gro -r step3_input.gro -p topol.top -o em.tpr && gmx_mpi mdrun -deffnm em && gmx_mpi grompp -f  step4.1_equilibration.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx && gmx_mpi mdrun -deffnm nvt && gmx_mpi grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -n index.ndx && gmx_mpi mdrun -deffnm npt && gmx_mpi grompp -f step5_production.mdp -c npt.gro -t npt.cpt -p topol.top -o md_new.tpr -n index.ndx && gmx_mpi mdrun -deffnm md_new
+mpirun gmx_mpi grompp -f minimization.mdp -c input.gro -r input.gro -p topol.top -o em.tpr && gmx_mpi mdrun -deffnm em && gmx_mpi grompp -f  equilibration.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx && gmx_mpi mdrun -deffnm nvt && gmx_mpi grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -n index.ndx && gmx_mpi mdrun -deffnm npt && gmx_mpi grompp -f production.mdp -c npt.gro -t npt.cpt -p topol.top -o md_new.tpr -n index.ndx && gmx_mpi mdrun -deffnm md_new
