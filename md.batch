@@ -14,7 +14,7 @@
 #SBATCH -e slurm.%j.err        # errors
 
 module purge
-module load  apps/gromacs/2020.3/mpich+gcc_10.2.0/gpu        # Depends of availble module of gromacs in the server
+module load  apps/gromacs/2020.3/mpich+gcc_10.2.0/gpu        # Depends on availble module of gromacs in the server
 
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 export OMP_PLACES=cores
