@@ -1,4 +1,4 @@
-To submit a GROMACS job using the SLURM (Simple Linux Utility for Resource Management) job scheduling and management system, you need to create a SLURM batch script. Here's a step-by-step guide on how to do it:
+To submit a GROMACS job using the **SLURM** (Simple Linux Utility for Resource Management) job scheduling and management system, you need to create a SLURM batch script. Here's a step-by-step guide on how to do it:
 
 1. Create a GROMACS Input File:
 
